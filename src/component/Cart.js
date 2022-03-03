@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux'
 import { NavLink } from 'react-router-dom';
-import { addCart, delCart } from '../redux/action';
+import { addCart, removeCart } from '../redux/action';
 
 const Cart = () => {
     const state = useSelector((state)=> state.handleCart)
@@ -11,7 +11,7 @@ const Cart = () => {
         dispatch(addCart(item))
     }
     const handleDel = (item) => {
-        dispatch(delCart(item))
+        dispatch(removeCart(item))
     }
 
     const emptyCart = () => {
@@ -26,6 +26,7 @@ const Cart = () => {
         )
     }
     const cartItems = (product) => {
+        console.log(product)
         return(
             <>
                 <div className="px-4 my-5 bg-light rounded-3 py-5">
