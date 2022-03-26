@@ -42,7 +42,7 @@ export default function Product() {
             <div className='col-md-6'>
                 <img src={product.image} alt={product.title} height={"400px"} width={"400px"} />
             </div>
-            <div className='col-md-6'>
+            <div id='cart' className='col-md-6'>
                 <h4 className='text-uppercase text-black-50'>
                     {product.category}
                 </h4> 
@@ -59,7 +59,7 @@ export default function Product() {
                 <p className='lead'>
                     {product.description}
                 </p>
-                <button className='btn btn-outline-dark px-4 py-2' onClick={()=>addProduct(product)}>
+                <button  className='btn btn-outline-dark px-4 py-2' onClick={()=>addProduct(product)}>
                     Add to Cart
                 </button>
                 <NavLink className='btn btn-outline-dark ms-2 px-3 py-2' to="/cart">
